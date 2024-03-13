@@ -8,9 +8,9 @@ import { NotFoundError } from '../../common/errors';
 import { PayoutsInfo } from '../../common/types';
 
 import {
+  Blockchain,
   getAllMetadataFiles,
   getPayoutsInfo,
-  handleChunkPayout,
   removeHandledFiles,
   updatePayouts,
 } from './helpers';
@@ -43,7 +43,8 @@ export default async function handler(
     for (let chunkNum of chunkNums) {
       const payoutChunk = payouts[chunkNum];
 
-      await handleChunkPayout(payoutsInfo, payoutChunk, Number(chunkNum));
+      const blockchain = new Blockchain();
+      await blockchain.handleChunkPayout(payoutsInfo, payoutChunk, Number(chunkNum));
 
       delete payouts[chunkNums[0]];
 
