@@ -1,0 +1,7 @@
+.vercel
+.env
+.env.development.local
+
+public
+dist
+node_modules

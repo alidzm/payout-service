@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "outDir": "public",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "experimentalDecorators": true
+  },
+  "include": ["./**/*.ts"],
+  "exclude": ["node_modules"],
+}

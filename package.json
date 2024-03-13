@@ -4,15 +4,26 @@
 	"description": "",
 	"main": "index.ts",
 	"scripts": {
+		"build": "tsc",
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"start": "node api/index.ts"
+		"start": "ts-node api/index.ts"
 	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
-		"@vercel/postgres": "^0.7.2",
+		"@aws-sdk/client-lambda": "^3.529.1",
+		"@aws-sdk/client-s3": "^3.529.1",
+		"@human-protocol/core": "^2.0.0",
+		"@vercel/kv": "^1.0.1",
+		"@vercel/node": "^3.0.22",
 		"dotenv": "^16.4.1",
-		"express": "^4.18.2"
+		"ethers": "^6.11.1"
+	},
+	"devDependencies": {
+		"@types/node": "20.0.0",
+		"ts-node": "^10.9.2",
+		"tsc-alias": "^1.8.8",
+		"tsconfig-paths": "^4.2.0"
 	}
 }
